@@ -37,11 +37,22 @@ function ChatMessages({ messages, isLoading }) {
           )}
           <div className='relative w-full'>
             <div className='markdown-container'>
-              {(loading && !content) ? <Spinner />
-                : (role === 'assistant')
-                  ? <Markdown>{content}</Markdown>
-                  : <div className='whitespace-pre-line'>{content}</div>
-              }
+              {(loading && !content) ? <Spinner /> : (
+                role === 'assistant'
+                  ? (
+                      <div>
+                        <div className='font-semibold'>HopeAI:</div>
+                        <div className='markdown-container'>
+                          <Markdown>{content}</Markdown>
+                        </div>
+                      </div>
+                    )
+                  : (
+                      <div className='whitespace-pre-line'>
+                        <span className='font-semibold'>You: </span>{content}
+                      </div>
+                    )
+              )}
             </div>
             {(role === 'assistant' && !loading && content && ttsSupported) && (
               <button

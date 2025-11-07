@@ -32,4 +32,14 @@ Frontend:
 - `POST /chat` with body `{ "message": "..." }` → `{ "reply": "..." }`
 
 ## Voice
-- Voice input (mic) and voice output (speaker) use browser Web Speech APIs.
+- Real‑time voice chat is available via the mic button. It uses OpenAI Realtime with WebRTC. When you click the mic, the browser connects directly to OpenAI using a short‑lived token from the backend and streams your microphone; the assistant replies with live audio.
+- Typed chat still works via POST `/chat`.
+
+Config:
+- Backend requires `OPENAI_API_KEY`.
+- Optional envs:
+  - Backend: `OPENAI_REALTIME_MODEL` (default `gpt-4o-realtime-preview-2024-12-17`), `OPENAI_REALTIME_VOICE` (default `verse`).
+  - Frontend: `VITE_OPENAI_REALTIME_MODEL` to override the model used by the browser SDP offer.
+
+Permissions:
+- Allow microphone access in your browser when prompted.
