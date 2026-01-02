@@ -1,6 +1,6 @@
 HOPEO AI is an AI-based SaaS web application designed to support recovery from drug addiction. It offers an all-in-one feature set, including AI-driven data insights, voice-based automation, and an intelligent assistant that provides personalized recovery guidance and emotional support.
 
-HOPEO AI aligns with the United Nations Sustainable Development Goals (SDG 3.5) by promoting mental health, preventing substance abuse, and supporting long-term rehabilitation through accessible and technology-driven solutions.
+HOPEO AI aligns with the United Nations Sustainable Development Goals (SDG 3.5) by promoting mental health, preventing substance abuse, and supporting long-term rehabilitation through accessible and technology-driven solutions'
 
 
 # HopeAI Assistant (Simple)
